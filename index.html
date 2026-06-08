@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Direct EMC — Landing Page Concepts</title>
+<meta name="description" content="Five landing page design concepts for Direct EMC. Internal review only." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#f5f8fc;--surface:#fff;--ink:#0f1b2e;--muted:#5b6b86;--faint:#8a99b3;
+    --blue:#1d63d8;--blue-deep:#15489c;--line:#e3e9f3;--r:16px;
+    --sh:0 18px 44px -22px rgba(16,54,122,.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--muted);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Outfit',sans-serif;color:var(--ink);letter-spacing:-.02em;line-height:1.1}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .top{padding:64px 0 36px;text-align:center}
+  .badge{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);background:#eaf1ff;padding:7px 15px;border-radius:999px;margin-bottom:22px}
+  .top h1{font-size:clamp(32px,5vw,48px);font-weight:800;margin-bottom:14px}
+  .top p{font-size:18px;max-width:54ch;margin:0 auto}
+  .note{max-width:60ch;margin:22px auto 0;font-size:14px;color:var(--faint);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;padding:24px 0 70px}
+  .card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:transform .2s,box-shadow .2s}
+  .card:hover{transform:translateY(-5px);box-shadow:0 26px 56px -22px rgba(16,54,122,.45)}
+  .swatch{height:90px;display:flex;align-items:center;justify-content:center;font-family:'Outfit';font-weight:800;font-size:20px;letter-spacing:.02em}
+  .s1{background:linear-gradient(120deg,#1d63d8,#5b8def);color:#fff}
+  .s2{background:linear-gradient(120deg,#060c18,#1f4fd6);color:#7ab6ff}
+  .s3{background:#faf9f6;color:#1f4ea3;font-family:'Outfit'}
+  .s4{background:#fff;color:#0d0d0d;border-bottom:3px solid #1b34ff;font-family:'Outfit'}
+  .s5{background:linear-gradient(120deg,#3f74f0,#dbe8ff);color:#fff}
+  .card .body{padding:22px;flex:1;display:flex;flex-direction:column}
+  .card h3{font-size:20px;font-weight:700;margin-bottom:4px}
+  .card .tag{font-size:12px;font-weight:600;color:var(--blue-deep);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+  .card p{font-size:14.5px;flex:1;margin-bottom:18px}
+  .card .open{display:inline-flex;align-items:center;gap:8px;font-family:'Outfit';font-weight:700;font-size:14.5px;color:#fff;background:var(--blue);padding:11px 18px;border-radius:999px;align-self:flex-start;transition:background .18s}
+  .card .open:hover{background:var(--blue-deep)}
+  .card .open svg{width:15px;height:15px}
+  footer{text-align:center;padding:30px 0 50px;font-size:13px;color:var(--faint);border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <span class="badge">Direct EMC &middot; Design Review</span>
+      <h1>Five landing page concepts</h1>
+      <p>Same brand, same content, five different design strategies. Open each to compare. Best viewed on desktop, but all are mobile-friendly.</p>
+      <p class="note">These are design mockups. Phone number, email, names, and testimonials are placeholders. The forms confirm on submit but do not send anywhere yet.</p>
+    </header>
+
+    <main class="grid">
+      <div class="card">
+        <div class="swatch s1">Aa</div>
+        <div class="body">
+          <h3>v1 &middot; Clarity</h3>
+          <div class="tag">Light &middot; Corporate trust</div>
+          <p>Clean blue/white/gray, cards and bento. The safe all-rounder with broad professional appeal.</p>
+          <a class="open" href="v1-clarity/index.html">View<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="swatch s2">Aa</div>
+        <div class="body">
+          <h3>v2 &middot; Authority</h3>
+          <div class="tag">Dark &middot; Premium &amp; bold</div>
+          <p>Dark navy, big kinetic type, parallax and count-up stats. Modern, premium, high-energy.</p>
+          <a class="open" href="v2-authority/index.html">View<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="swatch s3">Aa</div>
+        <div class="body">
+          <h3>v3 &middot; Brief</h3>
+          <div class="tag">Editorial &middot; Calm</div>
+          <p>Warm, type-led, serif headlines, hairline dividers. Quiet and credible, like a medical white-paper.</p>
+          <a class="open" href="v3-brief/index.html">View<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="swatch s4">Aa</div>
+        <div class="body">
+          <h3>v4 &middot; Precision</h3>
+          <div class="tag">Swiss &middot; Brutalist</div>
+          <p>Stark white, hard black grid, monospace data, electric blue. Exact, compliance-grade, memorable.</p>
+          <a class="open" href="v4-precision/index.html">View<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="swatch s5">Aa</div>
+        <div class="body">
+          <h3>v5 &middot; Care</h3>
+          <div class="tag">Soft &middot; Patient-first</div>
+          <p>Warm, rounded, gentle motion. Leads with empathy for the injured patient. The most human of the five.</p>
+          <a class="open" href="v5-care/index.html">View<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer>Direct EMC landing page concepts &middot; internal review</footer>
+</body>
+</html>

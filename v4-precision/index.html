@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="robots" content="noindex, nofollow" />
+<script>document.documentElement.className += ' js';</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Direct EMC | Florida EMC Evaluations, Documented and Compliant</title>
+<meta name="description" content="Direct EMC: same-day, PIP-compliant Emergency Medical Condition evaluations by telehealth for Florida auto-accident patients. 48-hour signed reports built to withstand carrier review." />
+<!-- v4 PRECISION: Swiss / brutalist. ONE accent (electric blue). Sharp corners (radius 0). Hard black grid rules + monospace data. -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0d0d0d;
+    --paper:#ffffff;
+    --paper-2:#f3f3f0;
+    --blue:#1b34ff;
+    --blue-ink:#0c1ea8;
+    --mute:#5b5b57;
+    --line:#0d0d0d;
+    --line-soft:#d7d7d1;
+    --maxw:1240px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Archivo',system-ui,sans-serif;color:var(--ink);line-height:1;letter-spacing:-.02em;text-transform:uppercase}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 0}
+  .pad{padding-left:32px;padding-right:32px}
+  .kick{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);font-weight:500}
+  .label{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+
+  /* buttons: sharp, hard offset */
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-weight:700;font-size:14px;letter-spacing:.02em;text-transform:uppercase;padding:14px 22px;border:2px solid var(--ink);cursor:pointer;transition:transform .12s,box-shadow .12s,background .12s,color .12s;border-radius:0}
+  .btn svg{width:16px;height:16px}
+  .btn-primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .btn-primary:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+  .btn-primary:active{transform:translate(0,0);box-shadow:0 0 0 var(--ink)}
+  .btn-line{background:var(--paper);color:var(--ink)}
+  .btn-line:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--blue)}
+
+  /* header */
+  header{border-bottom:2px solid var(--ink);position:sticky;top:0;z-index:50;background:var(--paper)}
+  .nav{display:flex;align-items:center;height:66px;gap:30px}
+  .brand{font-family:'Archivo',sans-serif;font-weight:900;font-size:20px;letter-spacing:-.02em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+  .brand .sq{width:22px;height:22px;background:var(--blue);display:inline-block}
+  .nav-links{display:flex;gap:26px;margin-left:14px}
+  .nav-links a{font-family:'IBM Plex Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink);transition:color .15s}
+  .nav-links a:hover{color:var(--blue)}
+  .nav-right{margin-left:auto;display:flex;align-items:center;gap:18px}
+  .nav-ph{font-family:'IBM Plex Mono',monospace;font-size:13.5px;font-weight:500}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;color:var(--ink)}
+
+  /* hero */
+  .hero{border-bottom:2px solid var(--ink)}
+  .hero-grid{display:grid;grid-template-columns:1.15fr 1fr}
+  .hero-l{padding:54px 32px 46px;border-right:2px solid var(--ink);display:flex;flex-direction:column;justify-content:center}
+  .hero-l .kick{margin-bottom:22px}
+  .hero h1{font-family:'Archivo';font-weight:900;font-size:clamp(36px,4.6vw,54px);line-height:.96;letter-spacing:-.03em}
+  .hero h1 .bl{color:var(--blue)}
+  .hero .sub{font-size:18px;color:var(--mute);margin:24px 0 30px;max-width:40ch;text-transform:none}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-r{position:relative;overflow:hidden;min-height:340px}
+  .hero-r img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08);position:absolute;inset:0}
+  .hero-r::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(27,52,255,.16))}
+  .hero-r .stamp{position:absolute;left:0;bottom:0;z-index:2;background:var(--blue);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:10px 16px}
+  .hero-data{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink)}
+  .hero-data .d{padding:18px 32px;border-right:2px solid var(--ink)}
+  .hero-data .d:last-child{border-right:0}
+  .hero-data .dv{font-family:'Archivo';font-weight:800;font-size:24px;letter-spacing:-.02em}
+  .hero-data .dl{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-top:4px}
+
+  /* section scaffolding */
+  .sec{border-bottom:2px solid var(--ink)}
+  .sechead{padding:40px 32px 0}
+  .sechead h2{font-family:'Archivo';font-weight:800;font-size:clamp(28px,3.6vw,46px);letter-spacing:-.02em}
+  .sechead p{font-size:16px;color:var(--mute);max-width:60ch;margin-top:14px;text-transform:none}
+
+  /* stat grid */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr)}
+  .stats .s{padding:34px 32px;border-right:2px solid var(--ink)}
+  .stats .s:last-child{border-right:0}
+  .stats .sv{font-family:'Archivo';font-weight:900;font-size:clamp(34px,4vw,52px);letter-spacing:-.03em;line-height:1}
+  .stats .sv .u{color:var(--blue)}
+  .stats .sl{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-top:12px}
+
+  /* problem */
+  .prob{display:grid;grid-template-columns:1.1fr 1fr}
+  .prob .txt{padding:46px 32px;border-right:2px solid var(--ink)}
+  .prob .txt h2{font-family:'Archivo';font-weight:800;font-size:clamp(26px,3.2vw,40px);letter-spacing:-.02em;margin-bottom:18px}
+  .prob .txt p{font-size:16.5px;color:#2a2a28;margin-bottom:14px;text-transform:none;max-width:48ch}
+  .prob .txt b{color:var(--ink)}
+  .prob .fig{padding:46px 32px;display:flex;flex-direction:column;justify-content:center;background:var(--paper-2)}
+  .prob .cmp{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+  .prob .box{border:2px solid var(--ink);padding:22px 16px;text-align:center;background:var(--paper)}
+  .prob .box .bl{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+  .prob .box .bv{font-family:'Archivo';font-weight:900;font-size:clamp(30px,4vw,46px);letter-spacing:-.03em;margin-top:6px;color:var(--mute)}
+  .prob .box.win{border-color:var(--blue)}
+  .prob .box.win .bv{color:var(--blue)}
+  .prob .arr{font-family:'Archivo';font-weight:900;font-size:30px;color:var(--blue)}
+  .prob .cap{font-family:'IBM Plex Mono',monospace;font-size:13px;text-align:center;margin-top:20px;letter-spacing:.04em}
+  .prob .cap b{color:var(--ink)}
+
+  /* protocol */
+  .proto{display:grid;grid-template-columns:repeat(4,1fr)}
+  .proto .p{padding:34px 30px;border-right:2px solid var(--ink);min-height:230px;display:flex;flex-direction:column}
+  .proto .p:last-child{border-right:0}
+  .proto .pn{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--blue);letter-spacing:.1em;margin-bottom:auto}
+  .proto .p h3{font-family:'Archivo';font-weight:800;font-size:21px;letter-spacing:-.01em;margin:30px 0 9px}
+  .proto .p p{font-size:14.5px;color:var(--mute);text-transform:none}
+
+  /* audiences */
+  .aud{display:grid;grid-template-columns:repeat(3,1fr)}
+  .aud .a{padding:38px 30px;border-right:2px solid var(--ink);position:relative}
+  .aud .a:last-child{border-right:0}
+  .aud .a .ix{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);letter-spacing:.08em}
+  .aud .a h3{font-family:'Archivo';font-weight:800;font-size:23px;margin:18px 0 12px;letter-spacing:-.01em}
+  .aud .a p{font-size:15px;color:var(--mute);text-transform:none;margin-bottom:24px;min-height:72px}
+  .aud .a .go{font-family:'Archivo';font-weight:700;font-size:14px;text-transform:uppercase;color:var(--blue);display:inline-flex;align-items:center;gap:8px;border-bottom:2px solid var(--blue);padding-bottom:3px}
+  .aud .a .go svg{width:15px;height:15px;transition:transform .15s}
+  .aud .a:hover .go svg{transform:translateX(4px)}
+
+  /* why grid */
+  .why{display:grid;grid-template-columns:repeat(3,1fr)}
+  .why .w{padding:32px 30px;border-right:2px solid var(--ink);border-top:2px solid var(--ink)}
+  .why .w:nth-child(3n){border-right:0}
+  .why .w:nth-child(-n+3){border-top:0}
+  .why .w .wn{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--blue);letter-spacing:.1em;text-transform:uppercase}
+  .why .w h3{font-family:'Archivo';font-weight:700;font-size:18px;margin:14px 0 8px;letter-spacing:-.01em}
+  .why .w p{font-size:14.5px;color:var(--mute);text-transform:none}
+
+  /* testimonials */
+  .tt{display:grid;grid-template-columns:1fr 1fr}
+  .tt .q{padding:40px 32px}
+  .tt .q:first-child{border-right:2px solid var(--ink)}
+  .tt .q .qm{font-family:'Archivo';font-weight:900;font-size:46px;color:var(--blue);line-height:.5;height:24px}
+  .tt .q blockquote{font-family:'Archivo';font-weight:600;font-size:21px;line-height:1.32;letter-spacing:-.01em;margin:18px 0 22px;text-transform:none}
+  .tt .q .by{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.02em}
+  .tt .q .by b{color:var(--ink);display:block;text-transform:uppercase;letter-spacing:.06em}
+  .tt .q .by span{color:var(--mute)}
+
+  /* faq */
+  .faq .sechead{padding-bottom:24px}
+  .qa{border-top:2px solid var(--ink)}
+  .qa summary{list-style:none;cursor:pointer;padding:22px 32px;display:flex;justify-content:space-between;gap:20px;align-items:center;font-family:'Archivo';font-weight:700;font-size:17px;text-transform:uppercase;letter-spacing:-.01em}
+  .qa summary::-webkit-details-marker{display:none}
+  .qa summary .s{font-family:'IBM Plex Mono',monospace;color:var(--blue);flex:none;font-size:20px;transition:transform .2s}
+  .qa[open] summary .s{transform:rotate(45deg)}
+  .qa .a{padding:0 32px 24px;color:var(--mute);font-size:15.5px;max-width:70ch}
+
+  /* contact (inverted) */
+  .contact{background:var(--ink);color:#fff;border-bottom:0}
+  .contact .cg{display:grid;grid-template-columns:1fr 1fr}
+  .contact .cl{padding:54px 32px;border-right:2px solid #2b2b2b}
+  .contact .cl .kick{color:#6b7bff}
+  .contact .cl h2{font-family:'Archivo';font-weight:900;font-size:clamp(30px,4vw,52px);letter-spacing:-.03em;color:#fff;margin:18px 0 16px}
+  .contact .cl p{color:#b5b5b2;text-transform:none;max-width:40ch;margin-bottom:30px}
+  .ci{display:grid;gap:16px}
+  .ci .it{display:flex;gap:14px;align-items:baseline;font-family:'IBM Plex Mono',monospace;font-size:14px}
+  .ci .it .k{color:#6b7bff;width:74px;flex:none;text-transform:uppercase;font-size:11px;letter-spacing:.08em}
+  .ci .it b{color:#fff;font-weight:500}
+  .ci .it span{color:#8a8a87;display:block;font-size:12px}
+  .cr{padding:54px 32px}
+  .form{display:grid;gap:16px}
+  .field{display:grid;gap:7px}
+  .field label{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#9a9a97}
+  .field input,.field select{font-family:'IBM Plex Mono',monospace;font-size:14px;color:#fff;padding:13px 14px;border:2px solid #353535;background:#161616;border-radius:0;transition:border-color .15s}
+  .field input::placeholder{color:#6a6a67}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--blue)}
+  .field select option{background:#161616}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .form .btn-primary{width:100%;justify-content:center;margin-top:4px}
+  .form .fine{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7a7a77;line-height:1.6}
+
+  /* footer */
+  footer{background:var(--ink);color:#9a9a97;border-top:2px solid #2b2b2b;padding:44px 32px 30px}
+  .foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:13px}
+  .foot .fb{max-width:30ch}
+  .foot .brand{color:#fff;margin-bottom:12px}
+  .foot .col h4{color:#6b7bff;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+  .foot .col a,.foot .col span{display:block;color:#b5b5b2;margin-bottom:8px;text-transform:uppercase;font-size:12px;letter-spacing:.03em}
+  .foot .col a:hover{color:#fff}
+  .foot-bottom{margin-top:34px;border-top:2px solid #2b2b2b;padding-top:20px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7a7a77;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;text-transform:uppercase;letter-spacing:.05em}
+  .disc{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#6a6a67;line-height:1.7;margin-top:16px;max-width:90ch;text-transform:none}
+
+  /* reveal: hard wipe */
+  html.js .reveal{clip-path:inset(0 100% 0 0);transition:clip-path .7s cubic-bezier(.7,0,.2,1)}
+  html.js .reveal.in{clip-path:inset(0 0 0 0)}
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-l{border-right:0;border-bottom:2px solid var(--ink)}
+    .hero-r{min-height:300px}
+    .stats{grid-template-columns:1fr 1fr}
+    .stats .s:nth-child(2){border-right:0}
+    .stats .s:nth-child(-n+2){border-bottom:2px solid var(--ink)}
+    .prob{grid-template-columns:1fr}
+    .prob .txt{border-right:0;border-bottom:2px solid var(--ink)}
+    .proto{grid-template-columns:1fr 1fr}
+    .proto .p:nth-child(2){border-right:0}
+    .proto .p:nth-child(-n+2){border-bottom:2px solid var(--ink)}
+    .aud{grid-template-columns:1fr}
+    .aud .a{border-right:0;border-bottom:2px solid var(--ink)}
+    .aud .a:last-child{border-bottom:0}
+    .aud .a p{min-height:0}
+    .why{grid-template-columns:1fr 1fr}
+    .why .w:nth-child(3n){border-right:2px solid var(--ink)}
+    .why .w:nth-child(2n){border-right:0}
+    .why .w:nth-child(-n+2){border-top:0}
+    .why .w:nth-child(3){border-top:2px solid var(--ink)}
+    .tt{grid-template-columns:1fr}
+    .tt .q:first-child{border-right:0;border-bottom:2px solid var(--ink)}
+    .contact .cg{grid-template-columns:1fr}
+    .contact .cl{border-right:0;border-bottom:2px solid #2b2b2b}
+  }
+  @media(max-width:560px){
+    .nav-links,.nav-ph{display:none}
+    .menu-btn{display:block;margin-left:auto}
+    .hero-data{grid-template-columns:1fr}
+    .hero-data .d{border-right:0;border-bottom:2px solid var(--ink)}
+    .hero-data .d:last-child{border-bottom:0}
+    .stats{grid-template-columns:1fr}
+    .stats .s{border-right:0;border-bottom:2px solid var(--ink)}
+    .stats .s:last-child{border-bottom:0}
+    .proto{grid-template-columns:1fr}
+    .proto .p{border-right:0;border-bottom:2px solid var(--ink)}
+    .proto .p:last-child{border-bottom:0}
+    .why{grid-template-columns:1fr}
+    .why .w{border-right:0 !important;border-top:2px solid var(--ink) !important}
+    .why .w:first-child{border-top:0 !important}
+    .two{grid-template-columns:1fr}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html.js .reveal{clip-path:none;transition:none}
+    *{scroll-behavior:auto}
+    .btn:hover{transform:none;box-shadow:none}
+  }
+</style>
+</head>
+<body id="top">
+
+<header>
+  <div class="wrap pad nav">
+    <a class="brand" href="#top"><span class="sq"></span>Direct EMC</a>
+    <nav class="nav-links">
+      <a href="#protocol">Protocol</a>
+      <a href="#serve">Audiences</a>
+      <a href="#why">Standards</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-ph" href="tel:+19548720413">(954) 872-0413</a>
+      <a class="btn btn-primary" href="#contact">Schedule an EMC Evaluation</a>
+      <button class="menu-btn" aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-l">
+      <span class="kick">Florida EMC Evaluations / Telehealth</span>
+      <h1>Same-day EMC.<br /><span class="bl">Fully documented.</span></h1>
+      <p class="sub">Compliant telehealth evaluations that protect your patient's full $10,000 PIP benefit.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact">Schedule an EMC Evaluation<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" href="#serve">Refer a Patient</a>
+      </div>
+    </div>
+    <div class="hero-r">
+      <img src="assets/hero-provider.png" alt="Direct EMC physician conducting a telehealth evaluation" />
+      <span class="stamp">Licensed FL providers</span>
+    </div>
+  </div>
+  <div class="wrap hero-data">
+    <div class="d"><div class="dv">Same-day</div><div class="dl">Appointments / 7 days</div></div>
+    <div class="d"><div class="dv">48 hours</div><div class="dl">Signed report turnaround</div></div>
+    <div class="d"><div class="dv">100% remote</div><div class="dl">Secure video evaluation</div></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="sec">
+  <div class="wrap stats">
+    <div class="s reveal"><div class="sv">48<span class="u">h</span></div><div class="sl">Report turnaround</div></div>
+    <div class="s reveal"><div class="sv"><span class="u">$</span>10,000</div><div class="sl">PIP benefit unlocked</div></div>
+    <div class="s reveal"><div class="sv">14<span class="u">d</span></div><div class="sl">Statutory window</div></div>
+    <div class="s reveal"><div class="sv">7<span class="u">/wk</span></div><div class="sl">Same-day availability</div></div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="sec">
+  <div class="wrap prob">
+    <div class="txt reveal">
+      <span class="kick" style="display:block;margin-bottom:16px">The PIP clock</span>
+      <h2>Without an EMC determination, $7,500 in coverage is gone.</h2>
+      <p>Florida law caps an accident patient at <b>$2,500</b> in PIP benefits. A documented Emergency Medical Condition lifts that ceiling to the full <b>$10,000</b>.</p>
+      <p>Care must begin within <b>14 days</b> of the accident. Miss the window, and the coverage and the case value go with it. Direct EMC delivers the determination while it still counts.</p>
+    </div>
+    <div class="fig reveal">
+      <div class="cmp">
+        <div class="box"><div class="bl">Without EMC</div><div class="bv">$2,500</div></div>
+        <div class="arr">&#8594;</div>
+        <div class="box win"><div class="bl">With EMC</div><div class="bv">$10,000</div></div>
+      </div>
+      <p class="cap"><b>4X COVERAGE.</b> DOCUMENTED. DEFENSIBLE.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROTOCOL -->
+<section class="sec" id="protocol">
+  <div class="sechead wrap reveal">
+    <h2>The protocol</h2>
+    <p>From referral to signed determination, the evaluation runs entirely over secure video. No clinic visit.</p>
+  </div>
+  <div class="wrap proto" style="margin-top:36px;border-top:2px solid var(--ink)">
+    <div class="p reveal"><div class="pn">STEP 01</div><div><h3>Refer or book</h3><p>Submit through the attorney portal or schedule directly in under two minutes.</p></div></div>
+    <div class="p reveal"><div class="pn">STEP 02</div><div><h3>Secure intake</h3><p>Digital intake and consent completed before the visit. No paperwork on the day.</p></div></div>
+    <div class="p reveal"><div class="pn">STEP 03</div><div><h3>Evaluation</h3><p>A licensed Florida provider conducts the EMC evaluation by video, same day in most cases.</p></div></div>
+    <div class="p reveal"><div class="pn">STEP 04</div><div><h3>Signed report</h3><p>The documented determination is delivered, typically within 48 hours, ready for the file.</p></div></div>
+  </div>
+</section>
+
+<!-- AUDIENCES -->
+<section class="sec" id="serve">
+  <div class="sechead wrap reveal">
+    <h2>Built for three audiences</h2>
+    <p>Attorneys, chiropractors, and accident victims each get a path designed around how they work.</p>
+  </div>
+  <div class="wrap aud" style="margin-top:36px;border-top:2px solid var(--ink)">
+    <div class="a reveal">
+      <div class="ix">A / ATTORNEYS</div>
+      <h3>Referral portal</h3>
+      <p>Submit clients, track status, and receive signed reports built to withstand carrier scrutiny. The $10,000 limit stays in play.</p>
+      <a class="go" href="#contact">Refer a Patient<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="a reveal">
+      <div class="ix">B / CHIROPRACTORS</div>
+      <h3>Keep patients on plan</h3>
+      <p>Refer for a fast determination without losing days to coverage questions, and keep treatment moving.</p>
+      <a class="go" href="#contact">Refer a Patient<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="a reveal">
+      <div class="ix">C / PATIENTS</div>
+      <h3>Seen from home, today</h3>
+      <p>Hurt in a crash? See a licensed Florida provider by video and keep the benefits you are entitled to.</p>
+      <a class="go" href="#contact">Schedule an EMC Evaluation<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec" id="why">
+  <div class="sechead wrap reveal">
+    <span class="kick" style="display:block;margin-bottom:14px">Standards</span>
+    <h2>Speed and compliance, no trade-off</h2>
+  </div>
+  <div class="wrap why" style="margin-top:36px">
+    <div class="w reveal"><div class="wn">01</div><h3>Same-day evaluations</h3><p>Seven days a week. Most patients seen the day they reach out.</p></div>
+    <div class="w reveal"><div class="wn">02</div><h3>48-hour reports</h3><p>Signed, structured documentation, ready for the file.</p></div>
+    <div class="w reveal"><div class="wn">03</div><h3>PIP-compliant</h3><p>Built to Florida statute and to hold up under carrier review.</p></div>
+    <div class="w reveal"><div class="wn">04</div><h3>Experienced providers</h3><p>Board-certified, Florida-licensed, fluent in auto-accident medicine.</p></div>
+    <div class="w reveal"><div class="wn">05</div><h3>HIPAA-conscious</h3><p>Encrypted intake, secure video, protected data throughout.</p></div>
+    <div class="w reveal"><div class="wn">06</div><h3>Fully telehealth</h3><p>No clinic trips for injured patients. Secure video, start to finish.</p></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec">
+  <div class="wrap tt">
+    <div class="q reveal">
+      <div class="qm">&ldquo;</div>
+      <blockquote>We refer in the morning and have a signed determination on file before the PIP window is anywhere near closing.</blockquote>
+      <div class="by"><b>Rachel Moreno</b><span>Personal Injury Attorney / Fort Lauderdale</span></div>
+    </div>
+    <div class="q reveal">
+      <div class="qm">&ldquo;</div>
+      <blockquote>My patients used to lose coverage waiting on evaluations. Now they see a provider the same day and stay on plan.</blockquote>
+      <div class="by"><b>Dr. Andre Thiago</b><span>Chiropractic Physician / Pompano Beach</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq" id="faq">
+  <div class="sechead wrap reveal"><h2>FAQ</h2></div>
+  <div class="wrap" style="margin-top:24px">
+    <details class="qa reveal" open><summary>What is an EMC evaluation<span class="s">+</span></summary><div class="a">An Emergency Medical Condition determination is a documented finding by a qualified provider. Under Florida PIP law it unlocks the full $10,000 in benefits instead of the $2,500 default cap.</div></details>
+    <details class="qa reveal"><summary>How fast can a patient be seen<span class="s">+</span></summary><div class="a">Most patients are seen the same day they reach out, seven days a week. Everything is telehealth, so there is no travel and no waiting room.</div></details>
+    <details class="qa reveal"><summary>Is the 14-day deadline strict<span class="s">+</span></summary><div class="a">Florida PIP requires that initial care begin within 14 days of the accident. Same-day telehealth is the most reliable way to document a compliant determination inside the window.</div></details>
+    <details class="qa reveal"><summary>How do attorneys refer<span class="s">+</span></summary><div class="a">Through the secure attorney referral portal. Submit a client in about two minutes, track status, and receive the signed report directly.</div></details>
+    <details class="qa reveal"><summary>How are reports delivered<span class="s">+</span></summary><div class="a">Signed determinations are delivered securely, typically within 48 hours, formatted and ready for the patient file or demand package.</div></details>
+    <details class="qa reveal"><summary>Is information kept private<span class="s">+</span></summary><div class="a">Yes. Intake, consent, and video visits run on HIPAA-conscious, encrypted systems, with strict safeguards for protected health information.</div></details>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap cg">
+    <div class="cl reveal">
+      <span class="kick">Request</span>
+      <h2>Get a patient seen today.</h2>
+      <p>Tell us who needs evaluating. We confirm same-day appointments fast and keep the PIP window on your side.</p>
+      <div class="ci">
+        <div class="it"><span class="k">Call</span><div><b>(954) 872-0413</b><span>Same-day scheduling, 7 days</span></div></div>
+        <div class="it"><span class="k">Email</span><div><b>intake@directemc.com</b><span>Referrals and reports</span></div></div>
+        <div class="it"><span class="k">Area</span><div><b>All of Florida</b><span>Telehealth statewide / Pompano Beach</span></div></div>
+      </div>
+    </div>
+    <div class="cr reveal">
+      <form class="form" onsubmit="return submitForm(event)">
+        <div class="field"><label for="role">Role</label>
+          <select id="role" required><option value="" disabled selected>Select one</option><option>Personal injury attorney</option><option>Chiropractor</option><option>Accident victim or patient</option><option>Other referring provider</option></select>
+        </div>
+        <div class="two">
+          <div class="field"><label for="name">Full name</label><input id="name" type="text" placeholder="Jordan Alvarez" required /></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" placeholder="(954) 555-0182" required /></div>
+        </div>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="you@example.com" required /></div>
+        <button class="btn btn-primary" type="submit">Schedule an EMC Evaluation<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="fine">Submitting does not create a provider relationship. Details stay private and are used only to contact you about scheduling.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot">
+    <div class="fb">
+      <div class="brand"><span style="display:inline-block;width:16px;height:16px;background:var(--blue);vertical-align:-2px;margin-right:8px"></span>DIRECT EMC</div>
+      <div>Connecting patients, providers, and attorneys for fast, compliant EMC evaluations across Florida.</div>
+    </div>
+    <div class="col"><h4>Protocol</h4><a href="#protocol">Process</a><a href="#serve">Audiences</a><a href="#why">Standards</a><a href="#faq">FAQ</a></div>
+    <div class="col"><h4>Act</h4><a href="#contact">Schedule an EMC Evaluation</a><a href="#serve">Refer a Patient</a><a href="#contact">Contact Us Today</a></div>
+    <div class="col"><h4>Contact</h4><a href="tel:+19548720413">(954) 872-0413</a><a href="mailto:intake@directemc.com">intake@directemc.com</a><span>Pompano Beach, FL</span></div>
+  </div>
+  <div class="foot-bottom"><span>&copy; 2026 Direct EMC</span><span>HIPAA-conscious / Florida PIP compliant</span></div>
+  <p class="disc">This website is for general informational purposes and does not constitute medical or legal advice. An Emergency Medical Condition determination is made by a licensed provider based on individual clinical evaluation. Eligibility for Personal Injury Protection benefits is governed by Florida law and individual policy terms. Submitting a form does not establish a provider-patient or attorney-client relationship.</p>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if(reduce || !('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
+  var io = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); },{threshold:.14, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+function submitForm(e){ e.preventDefault(); var b=e.target.querySelector('button[type=submit]'); b.textContent='Request received. We will call you shortly.'; b.disabled=true; return false; }
+</script>
+</body>
+</html>
