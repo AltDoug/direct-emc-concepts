@@ -7,28 +7,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Direct EMC | Care After a Florida Auto Accident, From Home</title>
 <meta name="description" content="Hurt in a Florida car accident? Direct EMC connects you with a licensed provider for a same-day Emergency Medical Condition evaluation by telehealth. Compassionate, fast, and PIP-compliant." />
-<!-- v5 CARE: warm, soft, human, patient-first. ONE accent (calm blue). Large rounded shapes, gentle spring motion. Decorative blobs are pseudo-elements (no layout impact). -->
+<!-- v5 CARE: warm, soft, human, patient-first. ONE accent (calm sage green). Large rounded shapes, gentle spring motion. Decorative blobs are pseudo-elements (no layout impact). -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --bg:#f5f8fe;
+    /* Sage palette — customer-preferred soft sage (#c8cdbf) is the signature brand token (--blue-soft).
+       Names kept as --blue* to limit the diff; values are sage green. */
+    --bg:#f3f6f0;
     --surface:#ffffff;
-    --tint:#e9f1ff;
-    --tint-2:#f0f6ff;
-    --ink:#16243d;
-    --muted:#56678a;
-    --faint:#8a99b4;
-    --blue:#3f74f0;
-    --blue-deep:#2f5fd0;
-    --blue-soft:#dbe8ff;
-    --line:#e7edf7;
+    --tint:#e4ebdd;
+    --tint-2:#eef2e8;
+    --ink:#1c2a1e;
+    --muted:#566353;
+    --faint:#8a978a;
+    --blue:#6a8a63;
+    --blue-deep:#42603c;
+    --blue-soft:#c8cdbf;
+    --line:#e3e8dd;
     --r:26px;
     --r-sm:18px;
     --pill:999px;
-    --sh:0 18px 50px -20px rgba(47,95,208,.30);
-    --sh-sm:0 10px 30px -16px rgba(47,95,208,.28);
+    --sh:0 18px 50px -20px rgba(66,96,60,.30);
+    --sh-sm:0 10px 30px -16px rgba(66,96,60,.28);
     --maxw:1180px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -45,13 +47,13 @@
   .btn{display:inline-flex;align-items:center;gap:9px;justify-content:center;font-weight:700;font-size:15.5px;padding:15px 28px;border-radius:var(--pill);border:2px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,background .2s}
   .btn svg{width:17px;height:17px}
   .btn-primary{background:var(--blue-deep);color:#fff;box-shadow:var(--sh-sm)}
-  .btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 20px 40px -16px rgba(47,95,208,.55)}
+  .btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 20px 40px -16px rgba(66,96,60,.55)}
   .btn-primary:active{transform:translateY(0) scale(.99)}
   .btn-soft{background:var(--surface);color:var(--blue-deep);border-color:var(--blue-soft)}
   .btn-soft:hover{transform:translateY(-3px);border-color:var(--blue);box-shadow:var(--sh-sm)}
 
   /* header */
-  header{position:sticky;top:0;z-index:50;background:rgba(245,248,254,.82);backdrop-filter:blur(14px)}
+  header{position:sticky;top:0;z-index:50;background:rgba(243,246,240,.82);backdrop-filter:blur(14px)}
   .nav{display:flex;align-items:center;height:78px;gap:28px}
   .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:20px;color:var(--ink);letter-spacing:-.02em}
   .brand .mark{width:38px;height:38px;flex:none}
@@ -65,8 +67,8 @@
 
   /* hero */
   .hero{padding:70px 0 84px;overflow:hidden}
-  .hero::before{content:"";position:absolute;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle,rgba(63,116,240,.18),transparent 65%);top:-160px;right:-120px;z-index:0;animation:float1 9s ease-in-out infinite}
-  .hero::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(63,116,240,.12),transparent 65%);bottom:-160px;left:-130px;z-index:0;animation:float2 11s ease-in-out infinite}
+  .hero::before{content:"";position:absolute;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle,rgba(106,138,99,.18),transparent 65%);top:-160px;right:-120px;z-index:0;animation:float1 9s ease-in-out infinite}
+  .hero::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(106,138,99,.12),transparent 65%);bottom:-160px;left:-130px;z-index:0;animation:float2 11s ease-in-out infinite}
   @keyframes float1{0%,100%{transform:translateY(0)}50%{transform:translateY(26px)}}
   @keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(-22px)}}
   .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:54px;align-items:center;position:relative;z-index:2}
@@ -168,7 +170,8 @@
   .qa{background:var(--surface);border-radius:var(--r-sm);box-shadow:var(--sh-sm);overflow:hidden}
   .qa summary{list-style:none;cursor:pointer;padding:22px 26px;display:flex;justify-content:space-between;gap:18px;align-items:center;font-weight:700;font-size:17px;color:var(--ink)}
   .qa summary::-webkit-details-marker{display:none}
-  .qa summary .ic{flex:none;width:30px;height:30px;border-radius:50%;background:var(--tint);color:var(--blue-deep);display:grid;place-items:center;font-weight:800;transition:transform .25s}
+  .qa summary .ic{flex:none;width:30px;height:30px;border-radius:50%;background:var(--tint);color:var(--blue-deep);display:grid;place-items:center;transition:transform .25s}
+  .qa summary .ic svg{width:15px;height:15px;display:block}
   .qa[open] summary .ic{transform:rotate(45deg)}
   .qa .a{padding:0 26px 24px;color:var(--muted);font-size:15.5px}
 
@@ -192,7 +195,7 @@
   .field label{font-size:13px;font-weight:700;color:var(--ink)}
   .field input,.field select{font-family:inherit;font-size:15px;color:var(--ink);padding:13px 15px;border:2px solid var(--line);border-radius:14px;background:var(--surface);transition:border-color .15s,box-shadow .15s}
   .field input::placeholder{color:var(--faint)}
-  .field input:focus,.field select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(63,116,240,.14)}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(106,138,99,.20)}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .form .btn-primary{width:100%;margin-top:4px}
   .form .fine{font-size:11.5px;color:var(--faint);margin-top:12px;text-align:center}
@@ -249,7 +252,7 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top">
-      <svg class="mark" viewBox="0 0 38 38" fill="none"><rect width="38" height="38" rx="13" fill="#3f74f0"/><path d="M9 20h4.4l2.2-5.6 3.5 9.4 2.7-6.3 1.5 2.5H29" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg class="mark" viewBox="0 0 38 38" fill="none"><rect width="38" height="38" rx="13" fill="#42603c"/><path d="M9 20h4.4l2.2-5.6 3.5 9.4 2.7-6.3 1.5 2.5H29" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Direct EMC
     </a>
     <nav class="nav-links">
@@ -418,12 +421,12 @@
   <div class="wrap">
     <div class="head reveal"><h2>Questions, answered gently</h2></div>
     <div class="faq-list">
-      <details class="qa reveal" open><summary>What is an EMC evaluation?<span class="ic">+</span></summary><div class="a">It is a documented finding by a licensed provider. Under Florida PIP law it is what keeps your full $10,000 in benefits available instead of the $2,500 default cap.</div></details>
-      <details class="qa reveal"><summary>How soon can I be seen?<span class="ic">+</span></summary><div class="a">Most people are seen the same day they reach out, seven days a week. Because it is telehealth, there is no travel and no waiting room.</div></details>
-      <details class="qa reveal"><summary>Do I really have only 14 days?<span class="ic">+</span></summary><div class="a">Florida PIP requires that your care begin within 14 days of the accident. A same-day telehealth visit is the easiest way to stay inside that window.</div></details>
-      <details class="qa reveal"><summary>What if my attorney refers me?<span class="ic">+</span></summary><div class="a">Great. They can submit you through the secure referral portal in about two minutes, and we take it from there.</div></details>
-      <details class="qa reveal"><summary>How will I get my report?<span class="ic">+</span></summary><div class="a">Your signed determination is delivered securely, typically within 48 hours, ready for your file or your attorney.</div></details>
-      <details class="qa reveal"><summary>Is my information private?<span class="ic">+</span></summary><div class="a">Yes. Intake, consent, and your video visit run on HIPAA-conscious, encrypted systems, with strict safeguards for your health data.</div></details>
+      <details class="qa reveal" open><summary>What is an EMC evaluation?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">It is a documented finding by a licensed provider. Under Florida PIP law it is what keeps your full $10,000 in benefits available instead of the $2,500 default cap.</div></details>
+      <details class="qa reveal"><summary>How soon can I be seen?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">Most people are seen the same day they reach out, seven days a week. Because it is telehealth, there is no travel and no waiting room.</div></details>
+      <details class="qa reveal"><summary>Do I really have only 14 days?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">Florida PIP requires that your care begin within 14 days of the accident. A same-day telehealth visit is the easiest way to stay inside that window.</div></details>
+      <details class="qa reveal"><summary>What if my attorney refers me?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">Great. They can submit you through the secure referral portal in about two minutes, and we take it from there.</div></details>
+      <details class="qa reveal"><summary>How will I get my report?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">Your signed determination is delivered securely, typically within 48 hours, ready for your file or your attorney.</div></details>
+      <details class="qa reveal"><summary>Is my information private?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">Yes. Intake, consent, and your video visit run on HIPAA-conscious, encrypted systems, with strict safeguards for your health data.</div></details>
     </div>
   </div>
 </section>
@@ -465,7 +468,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot">
-        <a class="brand" href="#top"><svg class="mark" viewBox="0 0 38 38" fill="none"><rect width="38" height="38" rx="13" fill="#3f74f0"/><path d="M9 20h4.4l2.2-5.6 3.5 9.4 2.7-6.3 1.5 2.5H29" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Direct EMC</a>
+        <a class="brand" href="#top"><svg class="mark" viewBox="0 0 38 38" fill="none"><rect width="38" height="38" rx="13" fill="#42603c"/><path d="M9 20h4.4l2.2-5.6 3.5 9.4 2.7-6.3 1.5 2.5H29" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Direct EMC</a>
         <p class="fd">Compassionate, same-day EMC evaluations by telehealth for Florida accident patients.</p>
       </div>
       <div class="foot"><h4>Care</h4><ul><li><a href="#how">How it works</a></li><li><a href="#serve">Who we help</a></li><li><a href="#why">Why us</a></li><li><a href="#faq">FAQ</a></li></ul></div>
@@ -485,7 +488,7 @@
   var io = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); },{threshold:.14, rootMargin:'0px 0px -50px 0px'});
   els.forEach(function(e){io.observe(e)});
 })();
-function submitForm(e){ e.preventDefault(); var b=e.target.querySelector('button[type=submit]'); b.textContent='Request received. We will call you shortly.'; b.disabled=true; b.style.background='#2f5fd0'; return false; }
+function submitForm(e){ e.preventDefault(); var b=e.target.querySelector('button[type=submit]'); b.textContent='Request received. We will call you shortly.'; b.disabled=true; b.style.background='#42603c'; return false; }
 </script>
 </body>
 </html>
