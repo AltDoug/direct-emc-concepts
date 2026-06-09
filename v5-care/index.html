@@ -34,7 +34,7 @@
     --maxw:1180px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;overflow-x:clip}
   body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--muted);line-height:1.65;-webkit-font-smoothing:antialiased}
   h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);line-height:1.12;letter-spacing:-.02em;font-weight:800}
   a{color:inherit;text-decoration:none}
@@ -64,6 +64,7 @@
   .nav-ph{display:flex;align-items:center;gap:7px;font-weight:700;color:var(--ink);font-size:15px}
   .nav-ph svg{width:16px;height:16px;color:var(--blue)}
   .menu-btn{display:none;background:none;border:0;color:var(--ink);cursor:pointer}
+  .mobile-menu{display:none}
 
   /* hero */
   .hero{padding:70px 0 84px;overflow:hidden}
@@ -191,9 +192,9 @@
   .form{position:relative;z-index:2;background:var(--surface);border-radius:var(--r-sm);padding:30px;box-shadow:var(--sh)}
   .form h3{font-size:21px;color:var(--ink);margin-bottom:4px}
   .form .fsub{color:var(--muted);font-size:14px;margin-bottom:20px}
-  .field{display:grid;gap:6px;margin-bottom:15px}
+  .field{display:grid;gap:6px;margin-bottom:15px;min-width:0}
   .field label{font-size:13px;font-weight:700;color:var(--ink)}
-  .field input,.field select{font-family:inherit;font-size:15px;color:var(--ink);padding:13px 15px;border:2px solid var(--line);border-radius:14px;background:var(--surface);transition:border-color .15s,box-shadow .15s}
+  .field input,.field select{font-family:inherit;font-size:16px;color:var(--ink);padding:13px 15px;border:2px solid var(--line);border-radius:14px;background:var(--surface);width:100%;min-width:0;transition:border-color .15s,box-shadow .15s}
   .field input::placeholder{color:var(--faint)}
   .field input:focus,.field select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(106,138,99,.20)}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -230,13 +231,22 @@
   }
   @media(max-width:560px){
     section{padding:64px 0}
-    .nav-links,.nav-ph{display:none}
+    .wrap{padding:0 18px}
+    .nav-links,.nav-ph,.nav-right .btn-primary{display:none}
     .menu-btn{display:block}
+    header.open .mobile-menu{display:flex}
+    .mobile-menu{flex-direction:column;gap:2px;background:var(--surface);border-top:1px solid var(--line);padding:8px 18px 18px}
+    .mobile-menu>a{padding:13px 4px;font-size:16px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--line)}
+    .mobile-menu .m-cta{margin-top:12px;padding:15px;text-align:center;background:var(--blue-deep);color:#fff;border-radius:var(--pill);border-bottom:0}
+    .mobile-menu .m-call{text-align:center;color:var(--blue-deep);border-bottom:0}
     .band-grid{grid-template-columns:1fr 1fr}
     .steps{grid-template-columns:1fr}
     .why-grid{grid-template-columns:1fr}
+    .two{grid-template-columns:1fr}
     .hero-card{left:8px}
     .prob-card .l,.prob-card .r{padding:32px 26px}
+    .cta-card{padding:22px}
+    .form{padding:22px}
     .foot-grid{grid-template-columns:1fr}
   }
   @media(prefers-reduced-motion:reduce){
@@ -266,6 +276,14 @@
       <a class="btn btn-primary" href="#contact">Schedule an EMC Evaluation</a>
       <button class="menu-btn" aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#how">How it works</a>
+    <a href="#serve">Who we help</a>
+    <a href="#why">Why us</a>
+    <a href="#faq">FAQ</a>
+    <a class="m-cta" href="#contact">Schedule an EMC Evaluation</a>
+    <a class="m-call" href="tel:+19548720413">Call (954) 872-0413</a>
   </div>
 </header>
 
@@ -487,6 +505,12 @@
   if(reduce || !('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
   var io = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); },{threshold:.14, rootMargin:'0px 0px -50px 0px'});
   els.forEach(function(e){io.observe(e)});
+})();
+(function(){
+  var hdr=document.querySelector('header'), mb=document.querySelector('.menu-btn');
+  if(!hdr||!mb) return;
+  mb.addEventListener('click',function(){ hdr.classList.toggle('open'); });
+  hdr.querySelectorAll('.mobile-menu a').forEach(function(a){ a.addEventListener('click',function(){ hdr.classList.remove('open'); }); });
 })();
 function submitForm(e){ e.preventDefault(); var b=e.target.querySelector('button[type=submit]'); b.textContent='Request received. We will call you shortly.'; b.disabled=true; b.style.background='#42603c'; return false; }
 </script>
